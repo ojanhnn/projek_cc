@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { jwtDecode } from "jwt-decode";
 
-export const BASE_URL = "http://localhost:5000";
+export const BASE_URL = "https://be-577895441870.asia-southeast2.run.app";
 
 export const axiosJWT = axios.create();
 

@@ -14,7 +14,7 @@ try {
     console.error(error);
 }
 
-app.use(cors({ credentials:true, origin:'http://localhost:3000' }));
+app.use(cors({ credentials:true, origin:'https://be-577895441870.asia-southeast2.run.app' }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
