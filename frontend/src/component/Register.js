@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
+import { axiosJWT, BASE_URL } from "../utils";
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -13,7 +14,7 @@ const Register = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/user', {
+            await axios.post(`${BASE_URL}/data`, {
                 name: name,
                 email: email,
                 password: password,

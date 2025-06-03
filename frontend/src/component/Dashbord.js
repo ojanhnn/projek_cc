@@ -3,7 +3,7 @@ import axios from 'axios';
 import { jwtDecode } from "jwt-decode";
 import { useNavigate, Link } from 'react-router-dom';
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://be-577895441870.asia-southeast2.run.app";
 
 const Dashboard = () => {
     const [name, setName] = useState('');
