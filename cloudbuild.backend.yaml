@@ -32,8 +32,6 @@ steps:
         "gcr.io/$PROJECT_ID/tcc-be",
         '--timeout',
         '3600',
-        '--port',
-        '5000',
         '--region',
         'asia-southeast2',
         "--allow-unauthenticated",
