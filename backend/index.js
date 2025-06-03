@@ -6,30 +6,22 @@ import cors from "cors";
 import router from "./routes/index.js";
 
 dotenv.config();
-
 const app = express();
-const PORT = process.env.PORT || 5000;
 
-// Tes koneksi ke database
-(async () => {
-  try {
+// Koneksi ke database
+try {
     await db.authenticate();
-    console.log("Database Connected...");
-  } catch (error) {
-    console.error("Database connection failed:", error);
-  }
-})();
+    console.log('Database Connected...');
+} catch (error) {
+    console.error('Database connection error:', error);
+}
 
 // Middleware
-app.use(cors({
-  credentials: true,
-  origin: true 
-}));
+app.use(cors({ credentials: true, origin: 'https://be-577895441870.asia-southeast2.run.app' }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
 
-// Jalankan server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// GANTI DARI INI:
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
