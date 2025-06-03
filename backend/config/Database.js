@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize('dbr-tcc','root','', {
+const db = new Sequelize('procc','root','', {
   host: "34.172.93.114",
   dialect: "mysql"
 });
