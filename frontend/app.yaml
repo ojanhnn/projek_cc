@@ -1,11 +1,11 @@
-runtime: nodejs20
+runtime: python39
 service: procc
 instance_class: F1
 
 handlers:
   - url: /
-    static_files: dist/index.js
-    upload: dist/index.js
+    static_files: dist/index.html
+    upload: dist/index.html
 
   - url: /(.*)
     static_files: dist/\1
