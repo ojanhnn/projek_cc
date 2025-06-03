@@ -6,6 +6,11 @@ steps:
 
   - name: 'node:18'
     dir: 'frontend'
+    entrypoint: 'bash'
+    args: ['-c', 'chmod +x node_modules/.bin/react-scripts']
+
+  - name: 'node:18'
+    dir: 'frontend'
     entrypoint: 'npm'
     args: ['run', 'build']
 
