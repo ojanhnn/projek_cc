@@ -6,13 +6,8 @@ steps:
 
   - name: 'node:18'
     dir: 'frontend'
-    entrypoint: 'bash'
-    args: ['-c', 'chmod +x node_modules/.bin/react-scripts']
-
-  - name: 'node:18'
-    dir: 'frontend'
-    entrypoint: 'npm'
-    args: ['run', 'build']
+    entrypoint: 'npx'
+    args: ['react-scripts', 'build']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     dir: 'frontend'
